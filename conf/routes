@@ -7,7 +7,7 @@
 GET     /                           controllers.HomeController.index
 GET     /places                      controllers.HomeController.listPlaces
 POST    /places/new                      controllers.HomeController.addPlace
-
-
+DELETE  /places/remove/:id          controllers.HomeController.removePlace(id: Int)
+PATCH   /places/update              controllers.HomeController.updatePlace
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
